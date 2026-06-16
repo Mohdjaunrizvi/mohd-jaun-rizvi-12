@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohd Jaun Rizvi | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#000;
+color:white;
+overflow-x:hidden;
+}
+
+/* LIVE BACKGROUND */
+
+#particles{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-2;
+background:
+linear-gradient(135deg,#050816,#090c20,#000);
+}
+
+.glow{
+position:fixed;
+width:500px;
+height:500px;
+border-radius:50%;
+filter:blur(120px);
+opacity:.4;
+z-index:-1;
+animation:float 12s infinite ease-in-out;
+}
+
+.glow1{
+background:#00f0ff;
+top:-150px;
+left:-150px;
+}
+
+.glow2{
+background:#8a2be2;
+bottom:-150px;
+right:-150px;
+animation-delay:3s;
+}
+
+@keyframes float{
+50%{
+transform:translateY(60px) translateX(50px);
+}
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:18px 8%;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(10px);
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+color:#00f0ff;
+}
+
+nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:500;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:120px 8%;
+gap:60px;
+flex-wrap:wrap;
+}
+
+.profile-img{
+width:320px;
+height:320px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #00f0ff;
+box-shadow:0 0 40px #00f0ff;
+}
+
+.hero-content{
+max-width:650px;
+}
+
+.hero-content h1{
+font-size:60px;
+line-height:1.1;
+}
+
+.hero-content span{
+color:#00f0ff;
+}
+
+.hero-content h3{
+font-size:28px;
+margin:15px 0;
+color:#ccc;
+}
+
+.hero-content p{
+line-height:1.8;
+font-size:18px;
+color:#ddd;
+}
+
+.btns{
+margin-top:25px;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:12px 24px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.primary{
+background:#00f0ff;
+color:#000;
+}
+
+.secondary{
+border:2px solid #00f0ff;
+color:#00f0ff;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+}
+
+/* SECTIONS */
+
+section{
+padding:100px 8%;
+}
+
+.section-title{
+font-size:42px;
+margin-bottom:40px;
+text-align:center;
+color:#00f0ff;
+}
+
+/* ABOUT */
+
+.about{
+background:rgba(255,255,255,.03);
+backdrop-filter:blur(10px);
+border-radius:20px;
+padding:40px;
+}
+
+/* SKILLS */
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.skill{
+padding:25px;
+text-align:center;
+border-radius:15px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+transition:.3s;
+}
+
+.skill:hover{
+transform:translateY(-10px);
+}
+
+/* GTA LUCKNOW */
+
+.gta-banner{
+position:relative;
+border-radius:25px;
+overflow:hidden;
+padding:70px;
+background:
+linear-gradient(135deg,#ff6a00,#ff0000,#6600ff);
+text-align:center;
+}
+
+.gta-banner h2{
+font-size:60px;
+font-weight:800;
+}
+
+.gta-banner p{
+font-size:20px;
+margin-top:15px;
+}
+
+.coming{
+margin-top:20px;
+font-size:30px;
+font-weight:700;
+background:#000;
+display:inline-block;
+padding:12px 30px;
+border-radius:50px;
+}
+
+/* SOCIAL */
+
+.socials{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.social-card{
+padding:20px 30px;
+border-radius:15px;
+background:rgba(255,255,255,.05);
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+.social-card:hover{
+transform:scale(1.05);
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:40px;
+color:#aaa;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:40px;
+}
+
+.hero-content h3{
+font-size:22px;
+}
+
+.profile-img{
+width:240px;
+height:240px;
+}
+
+.gta-banner h2{
+font-size:40px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="particles"></div>
+<div class="glow glow1"></div>
+<div class="glow glow2"></div>
+
+<nav>
+<div class="logo">JAUN</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#upcoming">Upcoming</a></li>
+<li><a href="#connect">Connect</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+
+<img src="jaun.jpg" alt="Mohd Jaun Rizvi" class="profile-img">
+
+<div class="hero-content">
+
+<h1>Mohd <span>Jaun Rizvi</span></h1>
+
+<h3>Web Designer • App Developer</h3>
+
+<p>
+Passionate Web Designer and App Developer with a vision to create
+modern digital experiences. I enjoy designing beautiful websites,
+building innovative applications, and turning ideas into reality.
+Currently working on exciting future projects that will be launched soon.
+</p>
+
+<div class="btns">
+<a href="#connect" class="btn primary">Contact Me</a>
+<a href="#upcoming" class="btn secondary">Upcoming Project</a>
+</div>
+
+</div>
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="about">
+
+<p>
+Hello! My name is Mohd Jaun Rizvi.
+
+I am a passionate Web Designer and App Developer who loves creating
+modern and user-friendly digital experiences.
+
+Although I haven't officially launched any public website or application
+yet, I am continuously learning, improving my skills, and working on
+future projects that aim to make a meaningful impact.
+
+My goal is to build innovative products, creative websites, powerful apps,
+and unique gaming experiences.
+</p>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="section-title">My Skills</h2>
+
+<div class="skills-grid">
+
+<div class="skill">HTML5</div>
+<div class="skill">CSS3</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Responsive Design</div>
+<div class="skill">UI/UX Design</div>
+<div class="skill">App Development</div>
+<div class="skill">Graphic Design</div>
+<div class="skill">AI Tools</div>
+
+</div>
+
+</section>
+
+<section id="upcoming">
+
+<h2 class="section-title">Upcoming Project</h2>
+
+<div class="gta-banner">
+
+<h2>GTA LUCKNOW</h2>
+
+<p>
+An Open World Indian Action Adventure Game Inspired By
+Lucknow's Streets, Culture And Lifestyle.
+</p>
+
+<div class="coming">
+COMING SOON
+</div>
+
+<br><br>
+
+<p>
+Open World • Story Mode • Vehicles • Dynamic Weather • Indian Environment
+</p>
+
+</div>
+
+</section>
+
+<section id="connect">
+
+<h2 class="section-title">Connect With Me</h2>
+
+<div class="socials">
+
+<a class="social-card"
+href="https://instagram.com/syedjaunrizvi"
+target="_blank">
+
+Instagram
+<br>
+@syedjaunrizvi
+
+</a>
+
+<a class="social-card"
+href="https://x.com/MohdJaunRi5"
+target="_blank">
+
+X (Twitter)
+<br>
+@MohdJaunRi5
+
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Mohd Jaun Rizvi | All Rights Reserved
+
+</footer>
+
+<script>
+
+/* SIMPLE LIVE PARTICLES */
+
+const canvas=document.createElement("canvas");
+canvas.style.position="fixed";
+canvas.style.top="0";
+canvas.style.left="0";
+canvas.style.width="100%";
+canvas.style.height="100%";
+canvas.style.zIndex="-1";
+
+document.getElementById("particles").appendChild(canvas);
+
+const ctx=canvas.getContext("2d");
+
+function resize(){
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+}
+resize();
+window.addEventListener("resize",resize);
+
+let particles=[];
+
+for(let i=0;i<120;i++){
+particles.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+r:Math.random()*3,
+dx:(Math.random()-0.5)*0.6,
+dy:(Math.random()-0.5)*0.6
+});
+}
+
+function animate(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+particles.forEach(p=>{
+
+ctx.beginPath();
+ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+ctx.fillStyle="rgba(0,240,255,.8)";
+ctx.fill();
+
+p.x+=p.dx;
+p.y+=p.dy;
+
+if(p.x<0||p.x>canvas.width)p.dx*=-1;
+if(p.y<0||p.y>canvas.height)p.dy*=-1;
+
+});
+
+requestAnimationFrame(animate);
+}
+
+animate();
+
+</script>
+
+</body>
+</html>
